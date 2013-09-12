@@ -35,4 +35,19 @@ public class ErbTest {
 		assertEquals("joviane jardim e guilherme silveira", new Erb().render("users.html.erb", map));
 	}
 
+	@Test
+	public void should_support_require_gem() throws ScriptException {
+		Map<String, Object> map = new HashMap<>();
+		map.put("name", "guilherme");
+		assertEquals("Hello gems", new Erb().render("requireAnotherGem.html.erb", map));
+	}
+
+
+	@Test
+	public void should_support_require_native_file() throws ScriptException {
+		Map<String, Object> map = new HashMap<>();
+		map.put("name", "guilherme");
+		assertEquals("guilherme", new Erb().render("requireNativeFile.html.erb", map));
+	}
+
 }
