@@ -17,15 +17,15 @@ Uma biblioteca simples, compatível com o erb nas views.
 
 Basta colocar o jar no seu projeto e usar em sua view:
 
-result.use(erb()); // com static import de ErbView.class
+	result.use(erb()); // com static import de ErbView.class
 
 Note que o diretório de suas views é "/WEB-INF/jsp/controller/method.erb". O nome "jsp" parece não fazer sentido
 mas ele representa o local onde encontramos as views.
 
 Ou ainda:
 
-result.use(ErbView.erb()); // OU;
-result.use(ErbView.class);
+	result.use(ErbView.erb()); // OU;
+	result.use(ErbView.class);
 
 # VRaptor View como padrão
 
